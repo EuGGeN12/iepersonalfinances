@@ -1,0 +1,11 @@
+# Setări locale ale editorului / Claude
+.claude/
+.vscode/
+.idea/
+
+# Exporturi de date personale (nu le urca pe GitHub)
+buget-*.json
+
+# Sistem
+Thumbs.db
+.DS_Store

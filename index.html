@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#000000">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="ie finances">
+  <title>ie personal finances</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="app">
+    <!-- Desktop: meniu lateral -->
+    <aside class="sidebar">
+      <div class="brand"><span class="logo">ie</span><span class="brand-text">personal<br>finances</span></div>
+      <button class="btn primary block" data-action="add">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+        Adaugă tranzacție
+      </button>
+      <nav id="sideNav" class="side-nav" aria-label="Navigare"></nav>
+      <p class="side-foot">Apasă <kbd>N</kbd> pentru tranzacție nouă</p>
+    </aside>
+
+    <div class="content">
+      <header class="topbar">
+        <div class="titles">
+          <div class="m-brand"><span class="logo sm">ie</span>personal finances</div>
+          <h1 id="title">Dashboard</h1>
+        </div>
+        <div class="month" id="monthSwitch">
+          <button data-action="prev" aria-label="Luna precedentă">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+          </button>
+          <span id="monthLabel"></span>
+          <button data-action="next" aria-label="Luna următoare">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
+        </div>
+      </header>
+      <main id="view"></main>
+    </div>
+
+    <!-- Mobil: bară de jos + buton plutitor -->
+    <nav id="tabbar" class="tabbar" aria-label="Navigare"></nav>
+    <button class="fab" data-action="add" aria-label="Adaugă tranzacție">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+    </button>
+  </div>
+
+  <div id="sheet" class="sheet" hidden></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
